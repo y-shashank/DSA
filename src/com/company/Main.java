@@ -2,6 +2,7 @@ package com.company;
 
 import com.company.arrays.FitSentencesOnScreen;
 import com.company.arrays.Google_MaximiseTheBeautyOfGarden;
+import com.company.arrays.PrisonCellAfterNDays;
 import com.company.backtracking.Google_MinimumKnightMove;
 import com.company.backtracking.Google_PathWithMaxGold;
 import com.company.backtracking.Hard_PalindromePartition;
@@ -10,6 +11,8 @@ import com.company.bfs.WordLadder;
 import com.company.binarysearch.MedianOfTwoSortedArray;
 import com.company.binarysearch.NumberOfRotationsOfSortedArray;
 import com.company.dfs.AllPossiblePartitionOfString;
+import com.company.greedy.Hard_GasStation;
+import com.company.greedy.MaximiseTopMostElementAfterKMove;
 import com.company.greedy_binarysearch.*;
 import com.company.binarytree.CountNodeWithHighestScore;
 import com.company.binarytree.VerifyInOrderSerialization;
@@ -73,7 +76,7 @@ public class Main {
         System.out.println(new KadaneContigousSubarrayWithLargestSum().process(new int[]{-2, -3, 4, -1,-2,1,5,-3}));
         System.out.println(new NumberOfSubarrayWithSumLessThanGivenSum().process(new int[]{2,5,6}, 10));
         System.out.println(new UniqueWaysToTraverseToEndOfMatrix().process(4,4));
-        System.out.println(new GivenAlphabetMappingDecodeNumber().process("11106"));
+        System.out.println(new GivenAlphabetMappingDecodeNumber().numDecodings("11106"));
         new MaxSplitOfPositiveEvenIntergers().process(12);
         new MaxSplitOfPositiveEvenIntergers().process(28);
         System.out.println(new LargestRectangleInHistogram().process(new int[]{2,1,5,6,2, 3 }));
@@ -235,5 +238,12 @@ public class Main {
         System.out.println(new Hard_PalindromePartition().partition("abba"));
         new AllPossiblePartitionOfString().process("abba");
         System.out.println(new PalindromePartition().process("abcbm"));
+        // inbuilt binary search
+        int[] v = new int[]{10,20,30,40,50};
+        System.out.println(Arrays.binarySearch(v, 45));
+        System.out.println(new DifferentWaysToAddParenthesis().diffWaysToCompute("2*3-4*5"));
+        System.out.println(new MaximiseTopMostElementAfterKMove().maximumTop(new int[]{5,2,2,4,0,6}, 4));
+        System.out.println(new PrisonCellAfterNDays().prisonAfterNDays(new int[]{0,1,0,1,1,0,0,1}, 7));
+        System.out.println(new Hard_GasStation().canCompleteCircuit(new int[]{1,2,3,4,5}, new int[]{3,4,5,1,2}));
     }
 }

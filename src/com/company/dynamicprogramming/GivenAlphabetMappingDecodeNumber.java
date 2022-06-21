@@ -1,5 +1,7 @@
 package com.company.dynamicprogramming;
 
+import java.util.Arrays;
+
 //Using the following mapping, a message comprising characters from A to Z can be encoded into numbers:
 //  'A' = "1" 'B" = "2"... 'Z" = "26"
 //  To decode an encoded message, all of the digits must be gathered and then mapped back into letters using the opposite of the aforementioned mapping (there may be multiple ways).
@@ -9,45 +11,26 @@ package com.company.dynamicprogramming;
 //  It should be noted that the grouping (1 11 06) is illegal since "06" cannot be mapped into 'F' because "6" differs from "06".
 //  Return the number of ways to decode a string s that solely contains digits.
 //
-//int numOfWaysToDecode(string s) {
-//    int n = s.length();
-//    vector<int> dp(n+1,0);
-//
-//    dp[0]=1;
-//    if(s[0]!='0')
-//        dp[1]=1;
-//
-//    for(int i=2;i<=n;i++){
-//        int op1 = s[i-1]-'0';
-//        int op2 = (s[i-2]-'0')*10 + (s[i-1]-'0');
-//
-//        if(op1>=1)
-//            dp[i] += dp[i-1];
-//        if(op2>=10 && op2<=26)
-//            dp[i] += dp[i-2];
-//    }
-//
-//    return dp[n];
-//}
 public class GivenAlphabetMappingDecodeNumber {
-    public int process(String s){
-        int dp[] = new int[s.length()];
-        // there is only 1 way to convert if there is only character
-        dp[0] = 1;
-        for(int i = 1;i < s.length(); i++){
-            if(s.charAt(i) == '0'){
-                // if there is zero then it cannot be changed directly it has to be combined with s[i-1] and taken together
-                dp[i] = dp[i-1];
-            }else{
-                // this is because this number can be individually converted into char
-                dp[i] = dp[i-1] + 1;
+    int[] dp;
+    public int numDecodings(String s) {
+        if(s.charAt(0) == '0') return 0;
+        dp = new int[s.length()];
+        Arrays.fill(dp, -1);
+        return process(s.toCharArray(), 0);
+    }
 
-                // if this prev number + current number are taken together as 1 number and if they are < 27 then they can be represented as valid char
-                if((s.charAt(i-1) + s.charAt(i)) < 27){
-                    dp[i] += 1;
-                }
-            }
+    int process(char[] c, int i){
+        if(i >= c.length) return 1;
+        if(c[i] == '0') return 0; // this is invalid path
+        if(dp[i] != -1) return dp[i];
+
+        // we only have 2 choice either take 1 char or 2 char
+        int res = process(c, i+1);
+        // try to take 2 char but we can only take it if its less than 27
+        if(i+1 < c.length && Integer.valueOf(c[i]+""+c[i+1]) < 27){
+            res += process(c, i+2);
         }
-        return dp[s.length()-1];
+        return dp[i] = res;
     }
 }
