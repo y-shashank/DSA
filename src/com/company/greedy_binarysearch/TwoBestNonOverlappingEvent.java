@@ -8,7 +8,9 @@ import java.util.Arrays;
  * 2054. Two Best Non-Overlapping Events
  * Medium
  *
- * You are given a 0-indexed 2D integer array of events where events[i] = [startTimei, endTimei, valuei]. The ith event starts at startTimei and ends at endTimei, and if you attend this event, you will receive a value of valuei. You can choose at most two non-overlapping events to attend such that the sum of their values is maximized.
+ * You are given a 0-indexed 2D integer array of events where events[i] = [startTimei, endTimei, valuei].
+ * The ith event starts at startTimei and ends at endTimei, and if you attend this event, you will receive a value of valuei.
+ * You can choose at most two non-overlapping events to attend such that the sum of their values is maximized.
  *
  * Return this maximum sum.
  *
@@ -75,6 +77,7 @@ public class TwoBestNonOverlappingEvent {
      *
      * There is a special mdification to this binary search
      * What we actually need to find the upper index (if target is at index 2,3,4) we want to return 4 and not 2
+     * the reason being the target is a time componnent and out maxi stores the max upto index `i` so we need to maximize the index `i` along with finding target
      * IN traditional binary search it would have returned 2
      *
      */

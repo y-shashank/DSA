@@ -1,4 +1,4 @@
-package com.company.greedy;
+package com.company.circular_tour;
 
 /**
  * 134. Gas Station
@@ -49,7 +49,7 @@ public class Hard_GasStation {
         int[] diff = new int[l];
         long sumG = 0, sumC =0;
         for(int i=0;i<l;i++){
-            // the diff array will tell us that at pump `i` what will be out  NET fuel consumed
+            // the diff array will tell us that at pump `i` what will be out  NET fuel change
             diff[i] = g[i]-c[i];
             sumG += g[i];
             sumC += c[i];

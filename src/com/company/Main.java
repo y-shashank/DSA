@@ -8,10 +8,13 @@ import com.company.backtracking.Google_PathWithMaxGold;
 import com.company.backtracking.Hard_PalindromePartition;
 import com.company.bfs.ArrayBFSTraversal;
 import com.company.bfs.WordLadder;
+import com.company.binarysearch.Google_KokoEatingBanana;
+import com.company.binarysearch.Koko_MinimizeMaxProductDistributedToAnyStore;
 import com.company.binarysearch.MedianOfTwoSortedArray;
 import com.company.binarysearch.NumberOfRotationsOfSortedArray;
 import com.company.dfs.AllPossiblePartitionOfString;
-import com.company.greedy.Hard_GasStation;
+import com.company.circular_tour.Hard_GasStation;
+import com.company.greedy.FarthestBuildingYouCanReach;
 import com.company.greedy.MaximiseTopMostElementAfterKMove;
 import com.company.greedy_binarysearch.*;
 import com.company.binarytree.CountNodeWithHighestScore;
@@ -245,5 +248,8 @@ public class Main {
         System.out.println(new MaximiseTopMostElementAfterKMove().maximumTop(new int[]{5,2,2,4,0,6}, 4));
         System.out.println(new PrisonCellAfterNDays().prisonAfterNDays(new int[]{0,1,0,1,1,0,0,1}, 7));
         System.out.println(new Hard_GasStation().canCompleteCircuit(new int[]{1,2,3,4,5}, new int[]{3,4,5,1,2}));
+        System.out.println(new Google_KokoEatingBanana().minEatingSpeed(new int[]{1,2,5,3,6,7}, 4));
+        System.out.println(new Koko_MinimizeMaxProductDistributedToAnyStore().minimizedMaximum(4, new int[]{1,2,5,3,6,7}));
+        System.out.println(new FarthestBuildingYouCanReach().furthestBuilding(new int[]{4,12,2,7,3,18,20,3,19}, 10, 2));
     }
 }
