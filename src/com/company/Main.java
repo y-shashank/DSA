@@ -37,6 +37,7 @@ import com.company.hash_and_sorting.HandOfStraight;
 import com.company.knapsack.KnapSackRecursiveMemoization;
 import com.company.knapsack.MaxSplitOfPositiveEvenIntergers;
 import com.company.priorityqueue_heap.KClosestElementsInUnsorted;
+import com.company.priorityqueue_heap.KthLargestElement;
 import com.company.priorityqueue_heap.MaxProductAfterKIncrement;
 import com.company.dqueue.SlidingWindowMaximum;
 import com.company.slidingwindow.*;
@@ -251,5 +252,6 @@ public class Main {
         System.out.println(new Google_KokoEatingBanana().minEatingSpeed(new int[]{1,2,5,3,6,7}, 4));
         System.out.println(new Koko_MinimizeMaxProductDistributedToAnyStore().minimizedMaximum(4, new int[]{1,2,5,3,6,7}));
         System.out.println(new FarthestBuildingYouCanReach().furthestBuilding(new int[]{4,12,2,7,3,18,20,3,19}, 10, 2));
+        System.out.println(new KthLargestElement().findKthLargest(new int[]{3,2,1,5,6,4}, 5));
     }
 }
