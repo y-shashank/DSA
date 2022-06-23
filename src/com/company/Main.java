@@ -14,6 +14,7 @@ import com.company.binarysearch.MedianOfTwoSortedArray;
 import com.company.binarysearch.NumberOfRotationsOfSortedArray;
 import com.company.dfs.AllPossiblePartitionOfString;
 import com.company.circular_tour.Hard_GasStation;
+import com.company.graph.disjointset.EarliestMomentEveryOneBecameFriend;
 import com.company.greedy.FarthestBuildingYouCanReach;
 import com.company.greedy.MaximiseTopMostElementAfterKMove;
 import com.company.greedy_binarysearch.*;
@@ -253,5 +254,8 @@ public class Main {
         System.out.println(new Koko_MinimizeMaxProductDistributedToAnyStore().minimizedMaximum(4, new int[]{1,2,5,3,6,7}));
         System.out.println(new FarthestBuildingYouCanReach().furthestBuilding(new int[]{4,12,2,7,3,18,20,3,19}, 10, 2));
         System.out.println(new KthLargestElement().findKthLargest(new int[]{3,2,1,5,6,4}, 5));
+        System.out.println(new EarliestMomentEveryOneBecameFriend().findMoment(new int[][]{
+                {20190101,0,1},{20190104,3,4},{20190107,2,3},{20190211,1,5},{20190224,2,4},{20190301,0,3},{20190312,1,2},{20190322,4,5} },
+        6));
     }
 }
