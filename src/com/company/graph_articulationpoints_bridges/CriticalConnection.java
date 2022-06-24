@@ -87,6 +87,7 @@ public class CriticalConnection {
                 // but if even after dfs(child) the low[child] is still greater than disc[node] that means no backedge is present and `node` is a articulation node
                 if(low[child] > disc[node] ){
                     // then `node` is a articulation node and edge from node -> child is a bridge
+                    // root node maybe added multiple times for each of its child so use set to remove duplicate
                     articulationPoints.add(node);
                     ArrayList<Integer> t = new ArrayList<>();
                     t.add(node);
@@ -94,7 +95,8 @@ public class CriticalConnection {
                     ans.add(t);
                 }
             }else if(child != parent){
-                // agar koi ais hild mila hai joki parent nai hai but visited hai
+                // so this `node` not a articulation point because we found a another path to this node from child
+                // agar koi aisa child mila hai joki parent nai hai but visited hai
                 // fir hum kosis karenge apne low[node] ko decrease karne ki
                 low[node] = Math.min(low[node], low[child]);
             }
