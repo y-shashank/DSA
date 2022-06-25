@@ -15,7 +15,6 @@ public class Google_LoggerRateLimiter {
      If this method returns false, the message will not be printed.
      The timestamp is in seconds granularity. */
     public boolean shouldPrintMessage(int timestamp, String message) {
-
         if(!map.containsKey(message)){
             map.put(message, timestamp);
             return true;
