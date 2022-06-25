@@ -40,9 +40,9 @@ import java.util.Stack;
  */
 
 public class VerifyInOrderSerialization {
-    public boolean isInorder(String preorder) {
+    public boolean isInorder(String inorder) {
         //n/2 , n/2-1
-        String[] p = preorder.split(",");
+        String[] p = inorder.split(",");
         if(p.length%2 == 0) return false;
 
         // it has to be ODD len

@@ -53,24 +53,11 @@ public class MeetingRoomII {
             return 0;
         }
 
-        // Min heap
-        PriorityQueue<Integer> allocator =
-                new PriorityQueue<Integer>(
-                        intervals.length,
-                        new Comparator<Integer>() {
-                            public int compare(Integer a, Integer b) {
-                                return a - b;
-                            }
-                        });
+        // Min heap will store endtime in ascending
+        PriorityQueue<Integer> allocator = new PriorityQueue<>((a, b)->{return a-b;});
 
         // Sort the intervals by start time
-        Arrays.sort(
-                intervals,
-                new Comparator<Interval>() {
-                    public int compare(Interval a, Interval b) {
-                        return a.start - b.start;
-                    }
-                });
+        Arrays.sort(intervals, (a, b)->{return a.start - b.start;});
 
         // Add the first meeting
         allocator.add(intervals[0].end);
@@ -80,7 +67,7 @@ public class MeetingRoomII {
 
             // If the room due to free up the earliest is free, assign that room to this meeting.
             if (intervals[i].start >= allocator.peek()) {
-                allocator.poll();
+                allocator.remove();
             }
 
             // If a new room is to be assigned, then also we add to the heap,

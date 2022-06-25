@@ -50,6 +50,14 @@ import java.util.Set;
  *
  */
 
+
+/**
+ *
+ * Isme we need to find a index before which array descending order me ho and after this index ascending order me ho
+ * Ya vo index jisse pahele count(guards) decrease ho rahe the and after i guards increase hone lage
+  *
+ */
+
 public class GoodTimeToRobBank {
     public List<Integer> goodDaysToRobBank(int[] security, int time) {
         List<Integer> res = new ArrayList<>();
