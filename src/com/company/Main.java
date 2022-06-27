@@ -32,6 +32,7 @@ import com.company.graph.InstallPackagesWithDependency;
 import com.company.graph.disjointset.Google_MostStoneRemovedWithSameRowOrColumn;
 import com.company.hash.*;
 import com.company.hash_and_sorting.HandOfStraight;
+import com.company.knapsack.Google_MinDiffBetweenServerLoad;
 import com.company.knapsack.KnapSackRecursiveMemoization;
 import com.company.knapsack.MaxSplitOfPositiveEvenIntergers;
 import com.company.minimum_spanning_tree.MinimumSpanningTree;
@@ -42,6 +43,7 @@ import com.company.dqueue.SlidingWindowMaximum;
 import com.company.slidingwindow.*;
 import com.company.sorting.*;
 import com.company.stack.*;
+import com.company.string.Amazon_FamilyLoginCount;
 import com.company.string.BackspaceStringCampare;
 import com.company.string.Google_LicensekeyFormatting;
 import com.company.string.ReorderDataInLog;
@@ -257,6 +259,11 @@ public class Main {
         6));
         System.out.println(new MinimumSpanningTree().minCostConnectPoints(new int[][]{ {2,-3},{-17,-8},{13,8},{-17,-15} }));
         System.out.println(new GroupAnagram().groupAnagrams(new String[]{"eat","tea","tan","ate","nat","bat"}));
-
+        System.out.println(new Amazon_FamilyLoginCount().countFamilyLogins(new String[]{"bag", "cbh", "sfe", "red", "cbh"}));
+        System.out.println(new Amazon_FamilyLoginCount().countLogins(new String[]{"bag", "cbh", "sfe", "red", "cbh"}));
+        System.out.println(new Google_MinDiffBetweenServerLoad().serverLoad(new int[]{2,7,4,1,8,1}));
+        System.out.println(new Google_MinDiffBetweenServerLoad().serverLoad(new int[]{31,26,33,21,40}));
+        System.out.println(new Google_MinDiffBetweenServerLoad().serverLoadDP(new int[]{2,7,4,1,8,1}));
+        System.out.println(new Google_MinDiffBetweenServerLoad().serverLoadDP(new int[]{31,26,33,21,40}));
     }
 }

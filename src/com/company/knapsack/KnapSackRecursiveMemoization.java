@@ -1,5 +1,7 @@
 package com.company.knapsack;
 
+import java.util.Arrays;
+
 // 0/1 Knapsack
 // in this at each item we have 2 choices
 // 1. include the item then we are left with N-1 items & W = W - w[item]
@@ -17,7 +19,7 @@ public class KnapSackRecursiveMemoization {
         if(dp[i][W] != -1)
             return dp[i][W];
         if(w[i] > W )
-            return dp[i][W] = process(v, w, i-1, W);
+            return dp[i][W] = process(v, w, i-1, W); // exclude this item
         int includeThisItem = v[i] + process(v, w, i-1, W-w[i]);
         int excludeThisItem = process(v, w, i-1, W);
         return dp[i][W] = Math.max(includeThisItem, excludeThisItem);

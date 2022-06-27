@@ -31,7 +31,7 @@ package com.company;
  *
  */
 
-public class UgluNumber2 {
+public class UglyNumber2 {
     public int nthUglyNumber(int n) {
         int[] dp = new int[n];
         dp[0] = 1;

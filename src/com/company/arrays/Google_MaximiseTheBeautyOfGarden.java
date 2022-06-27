@@ -55,6 +55,8 @@ public class Google_MaximiseTheBeautyOfGarden {
     public int process(int[] a){
         int res = Integer.MIN_VALUE, sum =0;
         HashMap<Integer, Integer> map = new HashMap<>();
+        // job bhi koi beauty value repeat hoga there could be a chance ki final solution uske 1st occurence se current occurence tak hoga
+        // so we calculate max beauty we can do till now and store it in max
         for(int i =0;i<a.length;i++){
             if(map.containsKey(a[i])){
                 // if we find a beauty value again in the array we will substract the sum till its first occourence then add the beauty value 2 times

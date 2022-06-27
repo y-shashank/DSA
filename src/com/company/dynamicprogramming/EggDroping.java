@@ -21,8 +21,8 @@ public class EggDroping {
             for (int e = 2; e < eggs + 1; e++) {
                 dp[n][e] = Integer.MAX_VALUE;
                 for (int x = 1; x <= n ; x++) {
-                    int eggBroken = dp[n - x][e - 1];
-                    int eggNotBroken = dp[x - 1][e];
+                    int eggNotBroken = dp[n - x][e - 1];
+                    int eggBroken = dp[x - 1][e];
                     dp[n][e] = Math.min(dp[n][e], Math.max(eggBroken, eggNotBroken) + 1);
                 }
             }

@@ -67,7 +67,8 @@ public class Hard_GasStation {
                 // solution not possible as our tank is empty
                 fuelLeft = 0;
                 // since pumpIndex did not work we can be sure that any pump from pumpindex till current i will also not work.
-                // because there is a unique solution as mentioned in question and if we were able to reach the solution index pump from our wrong pump then again we will be able to complete the circle, that means we can skip the pumpIndex....i pumps
+                // because there is a unique solution as mentioned in question and if we were able to reach the solution index pump from our wrong pump
+                // then again we will be able to complete the circle, that means we can skip the pumpIndex....i pumps
                 pumpIndex = i+1;
             }
         }
