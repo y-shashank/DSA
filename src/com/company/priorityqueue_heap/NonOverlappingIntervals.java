@@ -1,4 +1,4 @@
-package com.company.greedy_binarysearch;
+package com.company.priorityqueue_heap;
 
 import java.util.Arrays;
 

@@ -14,6 +14,7 @@ import com.company.binarysearch.MedianOfTwoSortedArray;
 import com.company.binarysearch.NumberOfRotationsOfSortedArray;
 import com.company.dfs.AllPossiblePartitionOfString;
 import com.company.circular_tour.Hard_GasStation;
+import com.company.gcd.Google_LargestNumber;
 import com.company.graph.disjointset.EarliestMomentEveryOneBecameFriend;
 import com.company.greedy.FarthestBuildingYouCanReach;
 import com.company.greedy.MaximiseTopMostElementAfterKMove;
@@ -36,9 +37,7 @@ import com.company.knapsack.Google_MinDiffBetweenServerLoad;
 import com.company.knapsack.KnapSackRecursiveMemoization;
 import com.company.knapsack.MaxSplitOfPositiveEvenIntergers;
 import com.company.minimum_spanning_tree.MinimumSpanningTree;
-import com.company.priorityqueue_heap.KClosestElementsInUnsorted;
-import com.company.priorityqueue_heap.KthLargestElement;
-import com.company.priorityqueue_heap.MaxProductAfterKIncrement;
+import com.company.priorityqueue_heap.*;
 import com.company.dqueue.SlidingWindowMaximum;
 import com.company.slidingwindow.*;
 import com.company.sorting.*;
@@ -265,5 +264,9 @@ public class Main {
         System.out.println(new Google_MinDiffBetweenServerLoad().serverLoad(new int[]{31,26,33,21,40}));
         System.out.println(new Google_MinDiffBetweenServerLoad().serverLoadDP(new int[]{2,7,4,1,8,1}));
         System.out.println(new Google_MinDiffBetweenServerLoad().serverLoadDP(new int[]{31,26,33,21,40}));
+        System.out.println(new Google_LargestNumber().largestNumber(new int[]{1,3,5,6,7}, 2));
+        System.out.println(new Google_TimeToTypeAString().timeTaken("abcdefghijklmnopqrstuvwxy", "cba"));
+        System.out.println(new Google_NumOfChairsAtParty().chairsNeeded(new int[]{1, 2, 6, 5, 3}, new int[]{5, 5, 7, 6, 8}));
+        System.out.println(new Google_NumOfChairsAtParty().sweepMethod(new int[]{1, 2, 6, 5, 3}, new int[]{5, 5, 7, 6, 8}));
     }
 }
