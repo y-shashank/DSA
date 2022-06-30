@@ -73,7 +73,6 @@ public class Hard_CitySkyline {
         // for(int i =0;i<p.length;i++) System.out.println(Arrays.toString(p[i]));
 
         PriorityQueue<Integer> q = new PriorityQueue<>((x,y)->{return y-x;});
-
         // in priority queue we will sore the max height of the building which is ongoing
         // it is sorted in descending
         q.add(0); // by default max height is 0

@@ -7,6 +7,7 @@ import com.company.backtracking.Google_MinimumKnightMove;
 import com.company.backtracking.Google_PathWithMaxGold;
 import com.company.backtracking.Hard_PalindromePartition;
 import com.company.bfs.ArrayBFSTraversal;
+import com.company.bfs.Google_OperationToMakeNetworkConnected;
 import com.company.bfs.WordLadder;
 import com.company.binarysearch.Google_KokoEatingBanana;
 import com.company.binarysearch.Koko_MinimizeMaxProductDistributedToAnyStore;
@@ -42,17 +43,35 @@ import com.company.dqueue.SlidingWindowMaximum;
 import com.company.slidingwindow.*;
 import com.company.sorting.*;
 import com.company.stack.*;
-import com.company.string.Amazon_FamilyLoginCount;
-import com.company.string.BackspaceStringCampare;
-import com.company.string.Google_LicensekeyFormatting;
-import com.company.string.ReorderDataInLog;
+import com.company.string.*;
 import com.company.two_pointer.ContainerWithMaxWater;
 import com.company.wierd_searching.Search2DMatrix;
+import dijakstra_single_source_shortest_path.NumberOfWaysToArriveAtDestination;
 
 import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
+
+        /**
+        TreeSet<Integer> left = new TreeSet<>();
+        left.remove(2);
+        left.headSet(2); // iterator of numbers of el strictly smaller than 2
+        left.headSet(2).size(); // how many numbers strictly smaller than 2
+
+        left.tailSet(2); //iterator for numbers greater or equal to 2
+        left.tailSet(2).size(); // how many greater or equal to 2
+
+        // this is same as TreeSet with map features
+        // it sort wrt KEYS
+        TreeMap<Integer, Integer> m = new TreeMap<>();
+        m.ceilingKey(3); // least key  greater or equal to 3
+        m.floorKey(3); // largest key less than or equal to 3
+        m.get(3); // get the value same as map
+        m.put(3, 3);
+        */
+
+
 	// write your code here
         System.out.println("LongestSubstringWithKUniqueCharacters = " + new LongestSubstringWithAtmost_K_UniqueCharacters().googledAlgo("aabacbebebenkwndkwndkwdndnwkabibiwufiow", 4));
 
@@ -178,7 +197,7 @@ public class Main {
         System.out.println(
                 Arrays.toString(new SumOfTreeDistances().optimised(3, new int[][]{{2,1},{0,2}}))
         );
-        System.out.println(new BalancedTree_CountNumberOfTeams().numTeams(new int[]{2,5,1,3,4}));
+        System.out.println(new Google_BalancedTree_CountNumberOfTeams().numTeams(new int[]{2,5,1,3,4}));
         System.out.println(Arrays.toString(new Google_BraceExpansion().process("{a,b}c{d,e}f")));
         System.out.println(new WordLadder().process("hit", "cog", Arrays.asList(new String[]{"hot", "dot", "dog", "lot", "log", "cog"})));
         System.out.println(new WordLadder().process("hit", "cog", Arrays.asList(new String[]{"hot", "dot", "dog", "lot", "log"})));
@@ -268,5 +287,12 @@ public class Main {
         System.out.println(new Google_TimeToTypeAString().timeTaken("abcdefghijklmnopqrstuvwxy", "cba"));
         System.out.println(new Google_NumOfChairsAtParty().chairsNeeded(new int[]{1, 2, 6, 5, 3}, new int[]{5, 5, 7, 6, 8}));
         System.out.println(new Google_NumOfChairsAtParty().sweepMethod(new int[]{1, 2, 6, 5, 3}, new int[]{5, 5, 7, 6, 8}));
+        System.out.println(new NumberOfWaysToArriveAtDestination().countPaths(7, new int[][]{
+                {0,6,7},{0,1,2},{1,2,3},{1,3,3},{6,3,3},{3,5,1},{6,5,1},{2,5,1},{0,4,5},{4,6,2}
+        }));
+        System.out.println(new Google_OperationToMakeNetworkConnected().makeConnected(6, new int[][]{ {0,1},{0,2},{0,3},{1,2},{1,3} }));
+        System.out.println(new Google_OddEvenJump().oddEvenJumps(new int[]{10,13,12,14,15}));
+        System.out.println(new Google_UniqueEmailAddress().numUniqueEmails(new String[]{"test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"}));
+        System.out.println(new Google_FruitsIntobasket().totalFruit(new int[]{3,3,3,1,2,1,1,2,3,3,4}));
     }
 }

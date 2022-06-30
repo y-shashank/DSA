@@ -37,7 +37,7 @@ import java.util.TreeSet;
  *
  */
 
-public class BalancedTree_CountNumberOfTeams {
+public class Google_BalancedTree_CountNumberOfTeams {
     public int numTeams(int[] rating) {
         /**
          *

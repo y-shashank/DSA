@@ -1,8 +1,5 @@
 package com.company.design;
 
-import com.company.BalancedTree_CountNumberOfTeams;
-
-import java.util.ArrayList;
 import java.util.PriorityQueue;
 
 /**
