@@ -40,7 +40,7 @@ public class LongestIncreasingSubsequence {
         Arrays.fill(dp, Integer.MAX_VALUE);
         for(int i =0;i<nums.length;i++){
             for(int j =0; j < dp.length;j++ ){
-                // instead of looping we convert this to binary search to find the we can inset in between or need to add int he end
+                // instead of looping we convert this to binary search to find if we can insert in between or need to add it to end
                 // this will bring down it to O(nlog(n))
                 if(nums[i] <= dp[j]){
                     dp[j] = nums[i];

@@ -9,16 +9,14 @@ import com.company.backtracking.Hard_PalindromePartition;
 import com.company.bfs.ArrayBFSTraversal;
 import com.company.bfs.Google_OperationToMakeNetworkConnected;
 import com.company.bfs.WordLadder;
-import com.company.binarysearch.Google_KokoEatingBanana;
-import com.company.binarysearch.Koko_MinimizeMaxProductDistributedToAnyStore;
-import com.company.binarysearch.MedianOfTwoSortedArray;
-import com.company.binarysearch.NumberOfRotationsOfSortedArray;
-import com.company.dfs.AllPossiblePartitionOfString;
+import com.company.binarysearch.*;
+import com.company.dfs.*;
 import com.company.circular_tour.Hard_GasStation;
 import com.company.gcd.Google_LargestNumber;
 import com.company.graph.disjointset.EarliestMomentEveryOneBecameFriend;
 import com.company.greedy.FarthestBuildingYouCanReach;
 import com.company.greedy.MaximiseTopMostElementAfterKMove;
+import com.company.greedy.MaximumBagsWithFullCapacityOfRocks;
 import com.company.greedy_binarysearch.*;
 import com.company.binarytree.CountNodeWithHighestScore;
 import com.company.binarytree.VerifyInOrderSerialization;
@@ -26,9 +24,6 @@ import com.company.dbs_bfs_combined.AmazonRottenTomato;
 import com.company.dbs_bfs_combined.K_HighestRankedItemByPrice;
 import com.company.dbs_bfs_combined.ShortestBridge;
 import com.company.dbs_bfs_combined.SumOfTreeDistances;
-import com.company.dfs.CrackingTheSafe;
-import com.company.dfs.Google_BraceExpansion;
-import com.company.dfs.Google_ConfusingNumberII;
 import com.company.dynamicprogramming.*;
 import com.company.graph.InstallPackagesWithDependency;
 import com.company.graph.disjointset.Google_MostStoneRemovedWithSameRowOrColumn;
@@ -38,6 +33,7 @@ import com.company.knapsack.Google_MinDiffBetweenServerLoad;
 import com.company.knapsack.KnapSackRecursiveMemoization;
 import com.company.knapsack.MaxSplitOfPositiveEvenIntergers;
 import com.company.minimum_spanning_tree.MinimumSpanningTree;
+import com.company.prefixtree_trie.Google_DistanceBetween2BinaryString;
 import com.company.priorityqueue_heap.*;
 import com.company.dqueue.SlidingWindowMaximum;
 import com.company.slidingwindow.*;
@@ -47,6 +43,7 @@ import com.company.string.*;
 import com.company.two_pointer.ContainerWithMaxWater;
 import com.company.wierd_searching.Search2DMatrix;
 import dijakstra_single_source_shortest_path.NumberOfWaysToArriveAtDestination;
+import dijakstra_single_source_shortest_path.PathWithMaxProbability;
 
 import java.util.*;
 
@@ -294,5 +291,19 @@ public class Main {
         System.out.println(new Google_OddEvenJump().oddEvenJumps(new int[]{10,13,12,14,15}));
         System.out.println(new Google_UniqueEmailAddress().numUniqueEmails(new String[]{"test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"}));
         System.out.println(new Google_FruitsIntobasket().totalFruit(new int[]{3,3,3,1,2,1,1,2,3,3,4}));
+        System.out.println(new Google_MinDayToMake_M_Bouquets().minDays(new int[]{7,7,7,7,12,7,7}, 2, 3));
+        System.out.println(new PathWithMaxProbability().maxProbability(3, new int[][]{ {0,1},{1,2},{0,2} }, new double[]{0.5,0.5,0.2},0 ,2));
+        System.out.println(new Hard_CountServerThatCommunicate().countServers(new int[][]{ {0,0,0,0},{1,1,1,1},{0,0,0,1},{0,0,1,1},{0,0,0,1} }));
+        new Google_MagicSquareOdd().process(5);
+        System.out.println(new Google_NumberOfDecreasingSubsequence().decreasingSubsequence(new int[]{5, 2, 4, 3, 1, 6}));
+        System.out.println(new Google_NumberOfDecreasingSubsequence().ldsSplit(new int[]{5, 2, 4, 3, 1, 6}));
+        System.out.println(new Google_DistanceBetween2BinaryString().findLength(new String[]{ "1011100", "1011011","1001111" }));
+        System.out.println(new Google_DistanceBetween2BinaryString().findLength(new String[]{ "10", "11" }));
+
+        System.out.println(new Google_DistanceBetween2BinaryString().findLength(new String[]{ "1011100", "1011100","101" }));
+        System.out.println(new Google_DistanceBetween2BinaryString().findLength(new String[]{ "1011000", "1011110","1011" }));
+        System.out.println(new MaximumBagsWithFullCapacityOfRocks().maximumBags(new int[]{2,3,4,5}, new int[]{1,2,4,4}, 2));
+        System.out.println(Arrays.toString(new Google_NearestStore().findStores(new int[]{5,10,17}, new int[]{1, 5, 20, 11, 16})));
+        System.out.println(Arrays.toString(new Google_NearestStore().findStores(new int[]{2,4,2}, new int[]{5, 3, 1, 2})));
     }
 }

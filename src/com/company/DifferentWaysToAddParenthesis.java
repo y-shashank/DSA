@@ -51,7 +51,7 @@ public class DifferentWaysToAddParenthesis {
     List<Integer> process(String exp){
         List<Integer> res = new ArrayList<>();
 
-        // try to solve sun problem
+        // try to solve sub problem
         for(int i =0;i<exp.length();i++){
             char c = exp.charAt(i);
             if(c == '+' || c == '-' || c == '*'){
